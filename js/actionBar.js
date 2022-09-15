@@ -1,7 +1,7 @@
-const orderByList = ['Precio menor a mayor', 'Precio mayor a menor', 'Recomendados'];
-const actionBar = document.querySelector('.action-bar');
+const orderByList = ['Recomendados', 'Precio menor a mayor', 'Precio mayor a menor'];
+const actionBar = document.getElementById('orderby');
 
-const actionsBar = () => {
+const addOrderBy = () => {
     const orderBy = document.createElement('select');
     orderBy.setAttribute('id', 'order-by');
     orderBy.setAttribute('class', 'order-by');
@@ -16,7 +16,7 @@ const actionsBar = () => {
 }
 
 document.addEventListener('DOMContentLoaded', e => {
-    actionsBar();
+    addOrderBy();
 });
 
 // export default actionsBar;

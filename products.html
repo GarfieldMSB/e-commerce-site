@@ -1,40 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fontawesome -->
-    <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
-    <link href="/fontawesome/css/brands.css" rel="stylesheet">
-    <link href="/fontawesome/css/solid.css" rel="stylesheet">
-    <!-- End Fonraweosome -->
+  <!-- Fontawesome -->
+  <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/fontawesome/css/solid.css" rel="stylesheet">
+  <!-- End Fonraweosome -->
 
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- End Google fonts -->
-    <title>Productos</title>
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- End Animate.css -->
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- End Google fonts -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/framework.css">
+  <!-- End CSS -->
+
+  <title>Productos</title>
 </head>
+
 <body>
-    <div class="grid-container">
-        <div class="gc-3">
-            <div class="products">
-                <div class="filters">
-                    filters
-                </div>
-                <div class="action-bar"></div>
-                <div class="products-container">
-                    
-                </div>
+  <div class="container">
+    <div class="grid col-3">
+      <div class="nav no-padding flex col-span-3">
+        <div id="nav-cart" class="card flex right" style="width: 100%;">
+            <div>
+                <i id="menu" class="button fa fa-solid fa-bars fa-2x" style="color: rgb(85, 85, 85);"></i>
+            </div>
+            <div>
+                <i id="user-account" class="button fa fa-solid fa-user fa-2x" style="color: rgb(85, 85, 85);"></i>
+                <i id="cart-shopping" class="button fa fa-regular fa-cart-shopping fa-2x"
+                    style="color: rgb(85, 85, 85);"></i>
             </div>
         </div>
     </div>
-    <!-- <script src="./js/app.js" type="module"></script> -->
-    <script src="./js/actionBar.js"></script>
-    <script src="./js/productCard.js"></script>
+
+      <div id="filters-container" class="card col-span-1">
+        <div class="card__title center">
+          <h3>Filtros</h3>
+        </div>
+
+        <!-- Accordion -->
+        <div class="accordion-body">
+          <div class="accordion">
+            <div class="accordion-container">
+              <div class="accordion-title">Marca</div>
+              <div class="accordion-content">Hypertext Markup Language (HTML) is a computer language that makes up
+                most web
+                pages and online applications. A hypertext is a text that is used to reference other pieces of text,
+                while a markup language is a series of markings that tells web servers the style and structure of a
+                document. HTML is very simple to learn and use. kjasjkasjkasjkasjkasjk</div>
+            </div>
+            <div class="accordion-container">
+              <div class="accordion-title">Talla</div>
+              <div class="accordion-content">CSS stands for Cascading Style Sheets. It is the language for describing
+                the
+                presentation of Web pages, including colours, layout, and fonts, thus making our web pages presentable
+                to the users. CSS is designed to make style sheets for the web. It is independent of HTML and can be
+                used with any XML-based markup language. CSS is popularly called the design language of the web.
+              </div>
+            </div>
+            <div class="accordion-container">
+              <div class="accordion-title">Precio</div>
+              <div class="accordion-content">CSS stands for Cascading Style Sheets. It is the language for describing
+                the
+                presentation of Web pages, including colours, layout, and fonts, thus making our web pages presentable
+                to the users. CSS is designed to make style sheets for the web. It is independent of HTML and can be
+                used with any XML-based markup language. CSS is popularly called the design language of the web.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="action-bar-container" class="card no-margin action-bar col-span-2">
+        <div id="orderby"></div>
+        <nav aria-label="Page navigation">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">&#60;</a></li>
+            <li class="page-item activate"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">&#62;</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="products-container" class="container-width col-span-2 no-padding">
+        <div id="products" class="grid col-3"></div>
+      </div>
+
+      <div id="pagination-container" class="container-width col-span-2 no-padding no-margin">
+        <div id="pagination" class="card action-bar center">
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">&#60;</a></li>
+              <li class="page-item activate"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">&#62;</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="./js/app.js" type="module"></script> -->
+  <script src="./js/actionBar.js"></script>
+  <script src="./js/productCard.js"></script>
+  <script src="./js/app.js" type="module"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
 
     <!-- Fontawesome -->
     <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="/fontawesome/css/brands.css" rel="stylesheet">
     <link href="/fontawesome/css/solid.css" rel="stylesheet">
+    <script defer src="/fontawesome/js/brands.js"></script>
+    <script defer src="/fontawesome/js/solid.js"></script>
+    <script defer src="/fontawesome/js/fontawesome.js"></script>
     <!-- End Fonraweosome -->
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;700&display=swap" rel="stylesheet">
     <!-- End Google fonts -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/framework.css">
 
     <title>Tienda</title>
 </head>
@@ -41,19 +47,58 @@
                 <img src="./img/hombre.jpg" alt="ropa-moda-hombre">
             </div>
             <div class="slider-section">
-                <img src="./img/chaquetas-aesthetic-mujer.jpg" alt="ropa-moda-hombre">
+                <img src="./img/chaquetas-aesthetic-mujer.jpg" alt="ropa-moda-mujer">
             </div>
             <div class="slider-section">
-                <img src="./img/niños.jpg" alt="ropa-moda-hombre">
+                <img src="./img/niños.jpg" alt="ropa-moda-nino">
             </div>
             <div class="slider-pagination"></div>
         </div>
     </div>
-    <div class="products-container">Productos</div>
+    <div class="container">
+        <div class="nav no-padding flex">
+            <div id="nav-cart" class="card flex right" style="width: 100%;">
+                <div>
+                    <i id="menu" class="button fa fa-solid fa-bars fa-2x" style="color: rgb(85, 85, 85);"></i>
+                </div>
+                <div>
+                    <i id="user-account" class="button fa fa-solid fa-user fa-2x" style="color: rgb(85, 85, 85);"></i>
+                    <i id="cart-shopping" class="button fa fa-regular fa-cart-shopping fa-2x"
+                        style="color: rgb(85, 85, 85);"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="grid col-3 row-2 margin-higher">
+            <div class="card row-span-2 no-padding">
+                <div class="card__zoom">\
+                    <figcaption></figcaption>
+                    <img src="img/mujer-modelo.jpg" alt="">
+                    <h2>PARA ELLAS</h2>
+                </div>
+            </div>
+            <div class="card col-span-2 no-padding">
+                <div class="card__zoom">
+                    <figcaption></figcaption>
+                    <img src="img/hombre-moda.jpg" alt="">
+                    <h2>PARA EL</h2>
+                </div>
+            </div>
+            <div class="card col-span-2 no-padding">
+                <div class="card__zoom">
+                    <figcaption></figcaption>
+                    <img src="img/ninos-moda.jpeg" alt="">
+                    <h2>PARA ELLOS</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JS -->
-    <!-- <script src="js/app.js" type="module"></script> -->
+    <script src="./js/app.js" type="module"></script>
     <script src="./js/slider.js" type="module"></script>
 </body>
 
-</html>
+</html>z

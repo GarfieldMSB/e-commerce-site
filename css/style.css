@@ -1,6 +1,31 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-family: "Inter", "sans-serif";
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Inter", "sans-serif";
+  font-weight: 500;
+}
+
+h5 {
+  font-family: "Inter", "sans-serif";
+  font-weight: 200;
+}
+
+p {
+  font-family: "Inter", "sans-serif";
+  font-weight: 100;
+}
+
+body {
+  background-color: #F3EFEF;
 }
 
 .nav {
@@ -72,6 +97,7 @@
   top: 96%;
   right: 50%;
   color: #808080;
+  display: flex;
 }
 .slider-container .slider-pagination .slider-page-item {
   margin: 0 10px;
@@ -82,6 +108,24 @@
 }
 .slider-container .slider-pagination .slider-page-item.active {
   color: #fff;
+}
+.slider-container .slider-pagination .circle {
+  width: 20px;
+  height: 20px;
+  background-color: #808080;
+  border-radius: 50%;
+}
+.slider-container .slider-pagination .circle:hover {
+  background-color: #fff;
+  transition-duration: 0.7s;
+}
+
+.featured-container {
+  grid-template-columns: 1fr 1fr;
+}
+.featured-container .featured {
+  width: auto;
+  display: flex;
 }
 
 .grid-container {
@@ -95,57 +139,240 @@
   grid-template-areas: ". products .";
 }
 .grid-container .products {
-  grid-area: products;
   color: #000;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-areas: "filters actionBar" "filters productsContainer";
+  grid-template-columns: 25% 75%;
+  grid-template-areas: "filters actionBar" "filters productsContainer" "filters pagination";
   grid-gap: 15px;
 }
-.grid-container .products .action-bar {
+.grid-container .products .products-container {
   width: 100%;
-  background-color: #808080;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10px;
+}
+
+.action-bar {
+  width: 100%;
   height: 60px;
-  margin: 10px 0px;
-  grid-area: actionBar;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.grid-container .products .action-bar .order-by {
+
+.order-by {
   margin: 0px 10px;
 }
-.grid-container .products .filters {
-  grid-area: filters;
-  margin-top: 10px;
-}
-.grid-container .products .products-container {
-  width: 100%;
-  grid-area: productsContainer;
+
+.card .card__title {
+  width: auto;
+  padding: 10px;
   display: flex;
 }
-.grid-container .products .products-container .card-products img {
+.card .card__body {
+  width: auto;
+}
+.card .card__footer {
   width: 100%;
-  height: 200px;
+  display: flex;
+  background-color: #fff;
+}
+.card img {
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card p,
+.card h1,
+.card h3,
+.card h5 {
+  margin: 10px 0;
+}
+.card .card__product .add-cart {
+  width: 160px;
+  height: 5px;
+  padding: 15px;
+  background-color: #02AC66;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.card .card__product .add-cart h3 {
+  background-color: #02AC66;
+  color: #fff;
+}
+
+.accordion-body .accordion {
+  width: 100%;
+}
+.accordion-body .accordion .accordion-container {
+  position: relative;
+  margin: 10px 10px;
+  align-items: center;
+  transition: height 2s ease-in;
+}
+.accordion-body .accordion .accordion-container .accordion-title {
+  position: relative;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.accordion-body .accordion .accordion-container .accordion-title::before {
+  content: "+";
+  transform: rotate(30deg);
+  position: absolute;
+  top: 50%;
+  color: #808080;
+  right: -5px;
+  font-size: 25px;
+  transform: translateY(-50%);
+}
+.accordion-body .accordion .accordion-container .accordion-content {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.accordion-body .accordion .accordion-container .accordion-content::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 8px;
+}
+.accordion-body .accordion .accordion-container .accordion-content::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #808080;
+}
+.accordion-body .accordion .accordion-container.active .accordion-content {
+  height: 250px;
+  overflow-y: scroll;
+}
+.accordion-body .accordion .accordion-container.active .accordion-title::before {
+  content: "-";
+  font-size: 25px;
+  transition: content 1s ease;
 }
 
 select {
   padding: 10px;
+  max-width: 250px;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #000;
   outline: none;
+}
+select option {
+  padding: 20px;
 }
 select:focus {
   outline: none;
 }
 
-.card {
-  max-width: 300px;
+.pagination {
+  display: flex;
+  margin: 0 10px 0 0;
+}
+.pagination li {
+  padding: 10px 15px;
+  list-style: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+.pagination li a {
+  text-decoration: none;
+  color: #808080;
+}
+.pagination .activate {
+  border-radius: 40px;
+  background-color: #C7C7C7;
 }
 
 .button {
   cursor: pointer;
+}
+
+#filters-container {
+  grid-row-start: 2;
+  grid-row-end: 6;
+}
+
+#products-container {
+  grid-column-start: 2;
+  grid-column-end: -1;
+}
+
+#pagination-container {
+  grid-column-start: 2;
+  grid-column-end: -1;
+}
+
+.card__zoom {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__zoom figcaption::before {
+  content: "";
+  position: absolute;
+  inset: 50px;
+  border: 2px solid #C7C7C7;
+  opacity: 0;
+  scale: 1.25;
+  transition: opacity 0.25s;
+  scale: 0.25s;
+}
+
+.card__zoom:hover figcaption::before {
+  opacity: 1;
+  scale: 1;
+}
+
+.card__zoom img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.85;
+  scale: 1.1;
+  transition: opacity 0.25;
+  scale: 0.35s;
+}
+
+.card__zoom:hover img {
+  opacity: 0.5;
+  scale: 1.25;
+}
+
+.card__zoom h2 {
+  position: absolute;
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#nav-cart {
+  justify-content: space-between;
+}
+
+#menu {
+  margin-left: 25px;
+}
+
+#user-account {
+  margin-left: 25px;
+}
+
+#cart-shopping {
+  margin-left: 25px;
 }/*# sourceMappingURL=style.css.map */

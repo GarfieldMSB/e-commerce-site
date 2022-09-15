@@ -7,9 +7,11 @@ const slider = () => {
 
     sliderPagination.addEventListener('click', e => {
         e.preventDefault();
+        console.log(e.target)
         if (e.target.classList[0] === 'slider-page-item') {
             sliderSection[i].classList.remove('active');
             sliderPagination.children[i].classList.remove('active')
+            console.log(e.target)
             i = e.target.id;
             sliderSection[i].classList.add('active');
             sliderPagination.children[i].classList.add('active')
@@ -45,11 +47,11 @@ const slider = () => {
 
             if (i === 0) {
                 sliderPageItem.setAttribute('id', i);
-                sliderPageItem.setAttribute('class', 'slider-page-item fa-solid fa-circle button active');
+                sliderPageItem.setAttribute('class', 'slider-page-item circle button active');
                 sliderPagination.insertAdjacentElement('afterbegin', sliderPageItem);
             } else {
                 sliderPageItem.setAttribute('id', i);
-                sliderPageItem.setAttribute('class', 'slider-page-item fa-solid fa-circle button');
+                sliderPageItem.setAttribute('class', 'slider-page-item circle button');
                 sliderPagination.insertAdjacentElement('afterbegin', sliderPageItem);
             }
 
