@@ -29,19 +29,33 @@
 </head>
 
 <body>
-    <div class="nav-slider">
-        <div class="nav">
-            <div class="logo button">Logo</div>
-            <div class="nav-sections">
-                <ul>
-                    <li><a href="">OFERTAS</a></li>
-                    <li><a href="">Hombre</a></li>
-                    <li><a href="">Mujer</a></li>
-                    <li><a href="">Niños</a></li>
-                </ul>
-            </div>
-            <div class="button">Iniciar sesión</div>
+    <div id="nav" class="nav">
+        <div class="logo button"><h1>Logo</h1></div>
+        <ul>
+            <li><a href="">Categorias</a></li>
+            <li><a href="">OFERTAS</a></li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#">
+
+                    <div class="button fa fa-regular fa-cart-shopping">
+                        <i id="cart-shopping" class="button"></i>
+                    </div>
+                </a>
+            </li>
+            <li><a href="#">
+                <div class="button fa fa-solid fa-user">
+                    <i id="user-account" class="button"></i>
+                </div>
+            </a></li>
+            <li><a href="#">
+                <div class="button">Iniciar sesión</div>
+            </a></li>
+        </ul>
         </div>
+    </div>
+    <div class="nav-slider">
         <div class="slider-container">
             <div class="slider-section active">
                 <img src="./img/hombre.jpg" alt="ropa-moda-hombre">
@@ -53,20 +67,6 @@
                 <img src="./img/niños.jpg" alt="ropa-moda-nino">
             </div>
             <div class="slider-pagination"></div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="nav no-padding flex">
-            <div id="nav-cart" class="card flex right" style="width: 100%;">
-                <div>
-                    <i id="menu" class="button fa fa-solid fa-bars fa-2x" style="color: rgb(85, 85, 85);"></i>
-                </div>
-                <div>
-                    <i id="user-account" class="button fa fa-solid fa-user fa-2x" style="color: rgb(85, 85, 85);"></i>
-                    <i id="cart-shopping" class="button fa fa-regular fa-cart-shopping fa-2x"
-                        style="color: rgb(85, 85, 85);"></i>
-                </div>
-            </div>
         </div>
     </div>
 

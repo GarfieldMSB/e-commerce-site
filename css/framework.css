@@ -191,7 +191,7 @@ img {
 }
 
 .nav {
-    background: rgba(67, 16, 195);
+    
 }
 
 .nav .container {
@@ -255,6 +255,19 @@ form .input {
 form .input:focus {
     border: 1px solid #641ee7;
     outline: none;
+}
+
+/* ===========================
+    BOTONES
+=========================== */
+
+.button {
+    cursor: pointer;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 /* .button {

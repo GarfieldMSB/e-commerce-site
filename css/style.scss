@@ -36,42 +36,42 @@ body {
 }
 
 
-.nav {
-    display: flex;
-    position: relative;
-    background-color: transparent !important;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    font-family: 'Inter', 'sans-serif';
-    z-index: 99;
-    color: $white;
+// .nav {
+//     display: flex;
+//     position: relative;
+//     background-color: transparent !important;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 10px 20px;
+//     font-family: 'Inter', 'sans-serif';
+//     z-index: 99;
+//     color: $white;
 
-    ul {
-        display: flex;
-        text-decoration: none;
+//     ul {
+//         display: flex;
+//         text-decoration: none;
 
 
-        li {
-            list-style: none;
-            font-weight: 400;
-            padding: 20px;
-            margin: 0 20px;
+//         li {
+//             list-style: none;
+//             font-weight: 400;
+//             padding: 20px;
+//             margin: 0 20px;
 
-            a {
-                padding: 10px;
-                color: $white;
-                text-decoration: none;
-            }
+//             a {
+//                 padding: 10px;
+//                 color: $white;
+//                 text-decoration: none;
+//             }
 
-        }
-    }
+//         }
+//     }
 
-    .logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-}
+//     .logo {
+//         font-size: 1.5rem;
+//         font-weight: 700;
+//     }
+// }
 
 .slider-container {
     width: 100%;
@@ -119,14 +119,11 @@ body {
             margin: 0 10px;
 
 
-            &:hover {
-                color: $white;
-                transition-duration: 0.7s;
-            }
+            
         }
 
         .slider-page-item.active {
-            color: $white;
+            background-color: $white;
         }
 
         .circle {
@@ -139,8 +136,9 @@ body {
 
             &:hover {
                 background-color: $white;
-                transition-duration: 0.7s;
+                transition-duration: .7s;
             }
+            
         }
     }
 }
@@ -356,10 +354,6 @@ select {
     }
 }
 
-.button {
-    cursor: pointer;
-}
-
 #filters-container {
     grid-row-start: 2;
     grid-row-end: 6;
@@ -377,6 +371,24 @@ select {
 #pagination-container {
     grid-column-start: 2;
     grid-column-end: -1;
+}
+
+#nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Inter', 'sans-serif';
+    z-index: 99;
+
+    ul {
+        list-style: none;
+        display: flex;
+    }
 }
 
 .card__zoom {
@@ -431,10 +443,6 @@ select {
     text-transform: uppercase;
 }
 
-#nav-cart {
-    justify-content: space-between;
-}
-
 #menu {
 
     margin-left: 25px;
@@ -460,3 +468,7 @@ select {
 //     grid-area: pagination;
 //     justify-content: center;
 // }
+
+i {
+    text-align: center;
+}
