@@ -30,48 +30,58 @@
 
 <body>
     <div id="nav" class="nav">
-        <div class="logo button"><h1>Logo</h1></div>
+        <div class="logo button">
+            <h1>Logo</h1>
+        </div>
         <ul>
             <li><a href="">Categorias</a></li>
             <li><a href="">OFERTAS</a></li>
         </ul>
         <ul>
             <li>
-                <a href="#">
-
+                <a href="#" id="cart-shopping" class="button">
                     <div class="button fa fa-regular fa-cart-shopping">
-                        <i id="cart-shopping" class="button"></i>
                     </div>
                 </a>
             </li>
-            <li><a href="#">
-                <div class="button fa fa-solid fa-user">
-                    <i id="user-account" class="button"></i>
-                </div>
-            </a></li>
-            <li><a href="#">
-                <div class="button">Iniciar sesión</div>
-            </a></li>
+            <li><a href="#" id="user-account" class="button">
+                    <div class="button fa fa-solid fa-user">
+                    </div>
+                </a></li>
+            <li><a href="#" id="login" class="button">
+                    <div>Iniciar sesión</div>
+                </a></li>
         </ul>
-        </div>
     </div>
-    <div class="nav-slider">
-        <div class="slider-container">
-            <div class="slider-section active">
-                <img src="./img/hombre.jpg" alt="ropa-moda-hombre">
-            </div>
-            <div class="slider-section">
-                <img src="./img/chaquetas-aesthetic-mujer.jpg" alt="ropa-moda-mujer">
-            </div>
-            <div class="slider-section">
-                <img src="./img/niños.jpg" alt="ropa-moda-nino">
-            </div>
-            <div class="slider-pagination"></div>
+
+    <div id="nav-movile" class="nav">
+        <div class="logo button">
+            <h1>Logo</h1>
+        </div>
+        <div>
+            <a href="#">
+                <div class="button fa fa-solid fa-bars"></div>
+            </a>
         </div>
     </div>
 
+
+    <div class="slider-container">
+        <div class="slider-section active">
+            <img src="./img/hombre.jpg" alt="ropa-moda-hombre">
+        </div>
+        <div class="slider-section">
+            <img src="./img/chaquetas-aesthetic-mujer.jpg" alt="ropa-moda-mujer">
+        </div>
+        <div class="slider-section">
+            <img src="./img/niños.jpg" alt="ropa-moda-nino">
+        </div>
+        <div class="slider-pagination"></div>
+    </div>
+
+
     <div class="container">
-        <div class="grid col-3 row-2 margin-higher">
+        <div class="grid col-3 lit-col-1 row-2 margin-higher">
             <div class="card row-span-2 no-padding">
                 <div class="card__zoom">\
                     <figcaption></figcaption>
@@ -98,7 +108,6 @@
 
     <!-- JS -->
     <script src="./js/app.js" type="module"></script>
-    <script src="./js/slider.js" type="module"></script>
 </body>
 
-</html>z
+</html>

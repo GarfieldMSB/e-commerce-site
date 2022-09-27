@@ -61,10 +61,11 @@ body {
   visibility: visible;
 }
 .slider-container .slider-pagination {
+  width: 100%;
+  justify-content: center;
   margin-bottom: 50px;
   position: absolute;
-  top: 96%;
-  right: 50%;
+  bottom: 0;
   color: #808080;
   display: flex;
 }
@@ -269,7 +270,7 @@ select:focus {
   grid-column-end: -1;
 }
 
-#nav {
+.nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -281,9 +282,15 @@ select:focus {
   font-family: "Inter", "sans-serif";
   z-index: 99;
 }
-#nav ul {
+.nav ul {
   list-style: none;
   display: flex;
+}
+
+#nav-movile {
+  display: none;
+  position: fixed;
+  z-index: 99;
 }
 
 .card__zoom {
@@ -353,4 +360,26 @@ select:focus {
 
 i {
   text-align: center;
+}
+
+/* Tamano Mediano - Tablets */
+/* Tamano pequeno - Celulares */
+@media screen and (max-width: 576px) {
+  /*Nav*/
+  #nav {
+    display: none;
+  }
+  #nav-movile {
+    display: flex;
+  }
+  /*Slider*/
+  .slider-container {
+    height: 300px;
+  }
+  .slider-container .slider-section {
+    height: 300px;
+  }
+  .slider-container .slider-pagination {
+    bottom: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */

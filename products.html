@@ -31,20 +31,42 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="grid col-3">
-      <div class="nav no-padding flex col-span-3">
-        <div id="nav-cart" class="card flex right" style="width: 100%;">
-            <div>
-                <i id="menu" class="button fa fa-solid fa-bars fa-2x" style="color: rgb(85, 85, 85);"></i>
-            </div>
-            <div>
-                <i id="user-account" class="button fa fa-solid fa-user fa-2x" style="color: rgb(85, 85, 85);"></i>
-                <i id="cart-shopping" class="button fa fa-regular fa-cart-shopping fa-2x"
-                    style="color: rgb(85, 85, 85);"></i>
-            </div>
-        </div>
+  <div id="nav" class="nav" style="background-color: #9da3a3;">
+    <div class="logo button">
+      <h1>Logo</h1>
     </div>
+    <ul>
+      <li><a href="">Categorias</a></li>
+      <li><a href="">OFERTAS</a></li>
+    </ul>
+    <ul>
+      <li>
+        <a href="#" id="cart-shopping" class="button">
+          <div class="button fa fa-regular fa-cart-shopping">
+          </div>
+        </a>
+      </li>
+      <li><a href="#" id="user-account" class="button">
+          <div class="button fa fa-solid fa-user">
+          </div>
+        </a></li>
+      <li><a href="#" id="login" class="button">
+          <div>Iniciar sesión</div>
+        </a></li>
+    </ul>
+  </div>
+  <div id="nav-movile" class="nav">
+    <div class="logo button">
+      <h1>Logo</h1>
+    </div>
+    <div>
+      <a href="#">
+        <div class="button fa fa-solid fa-bars"></div>
+      </a>
+    </div>
+  </div>
+  <div class="container" style="margin-top: 90px;";>
+    <div class="grid col-3">
 
       <div id="filters-container" class="card col-span-1">
         <div class="card__title center">
@@ -84,7 +106,7 @@
         </div>
       </div>
 
-      <div id="action-bar-container" class="card no-margin action-bar col-span-2">
+      <div id="action-bar-container" class="card no-margin action-bar col-span-3">
         <div id="orderby"></div>
         <nav aria-label="Page navigation">
           <ul class="pagination">
