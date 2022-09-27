@@ -27,8 +27,9 @@
 const Navbar = () => {
 
     class Color {
-        constructor(lienzo, scrollAbajo) {
-            this.lienzo = lienzo
+        constructor(nav, navMobile, scrollAbajo) {
+            this.nav = nav
+            this.navMobile = navMobile
             this.scrollAbajo = scrollAbajo
         }
 
@@ -36,20 +37,32 @@ const Navbar = () => {
         cambiaColor() {
             document.addEventListener("scroll", () => {
                 let scrollAbajo = window.scrollY;
-                (scrollAbajo >= 0 && scrollAbajo <= 400) ? this.lienzo.classList.remove("nav-background")
-                        : this.lienzo.classList.add("nav-background")
+                if (scrollAbajo >= 0 && scrollAbajo <= 200) {
+                    this.nav.classList.remove("nav-background");
+                    this.navMobile.classList.remove('nav-background');
+                } else {
+                    this.nav.classList.add("nav-background");
+                    this.navMobile.classList.add('nav-background');
+                }
+                console.log(scrollAbajo)
             })
         }
     }
 
-    let lienzo = document.querySelector("#nav")
+    let nav = document.querySelector("#nav")
+    let navMobile = document.querySelector("#nav-mobile")
     let scrollAbajo = window.scrollY;
 
     //Si la web se encuentra con un scroll de 500 el nav tiene otro color
-    if (scrollAbajo >= 400) {
-        lienzo.classList.add('nav-background')           
+
+    if (scrollAbajo >= 200) {
+        nav.classList.add('nav-background');
+
+        if (navMobile) {
+            navMobile.classList.add('nav-background');
+        }
     }
-    const color = new Color(lienzo, scrollAbajo);
+    const color = new Color(nav, navMobile, scrollAbajo);
     color.cambiaColor()
 }
 

@@ -395,7 +395,7 @@ select {
     }
 }
 
-#nav-movile {
+#nav-mobile {
     display: none;
     position: fixed;
     z-index: 99;
@@ -486,7 +486,6 @@ i {
 /* Tamano Mediano - Tablets */
 @media screen and (max-width: 1200px){
 
-    
 }
 
 /* Tamano pequeno - Celulares */
@@ -497,7 +496,7 @@ i {
         display: none;
     }
 
-    #nav-movile {
+    #nav-mobile {
         display: flex;
     }
 

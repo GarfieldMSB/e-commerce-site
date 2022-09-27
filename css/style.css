@@ -287,7 +287,7 @@ select:focus {
   display: flex;
 }
 
-#nav-movile {
+#nav-mobile {
   display: none;
   position: fixed;
   z-index: 99;
@@ -369,7 +369,7 @@ i {
   #nav {
     display: none;
   }
-  #nav-movile {
+  #nav-mobile {
     display: flex;
   }
   /*Slider*/
