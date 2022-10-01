@@ -55,18 +55,22 @@
         </a></li>
     </ul>
   </div>
-  <div id="nav-mobile" class="nav">
+  <div id="nav-mobile" class="nav" style="background-color: #9da3a3;">
     <div class="logo button">
       <h1>Logo</h1>
     </div>
-    <div>
+    <div id="menu" >
       <a href="#">
         <div class="button fa fa-solid fa-bars"></div>
       </a>
     </div>
   </div>
-  <div class="container" style="margin-top: 90px;";>
-    <div class="grid col-3">
+  <div class="container-sidebar">
+    <div class="background-sidebar"></div>
+    <div class="sidebar"></div>
+  </div>
+  <div class="container" style="margin-top: 90px;" ;>
+    <div class="grid col-3 lit-col-1">
 
       <div id="filters-container" class="card col-span-1">
         <div class="card__title center">
@@ -78,32 +82,26 @@
           <div class="accordion">
             <div class="accordion-container">
               <div class="accordion-title">Marca</div>
-              <div class="accordion-content">Hypertext Markup Language (HTML) is a computer language that makes up
-                most web
-                pages and online applications. A hypertext is a text that is used to reference other pieces of text,
-                while a markup language is a series of markings that tells web servers the style and structure of a
-                document. HTML is very simple to learn and use. kjasjkasjkasjkasjkasjk</div>
+              <div id="trademark" class="accordion-content">
+
+              </div>
             </div>
             <div class="accordion-container">
               <div class="accordion-title">Talla</div>
-              <div class="accordion-content">CSS stands for Cascading Style Sheets. It is the language for describing
-                the
-                presentation of Web pages, including colours, layout, and fonts, thus making our web pages presentable
-                to the users. CSS is designed to make style sheets for the web. It is independent of HTML and can be
-                used with any XML-based markup language. CSS is popularly called the design language of the web.
+              <div id="size" class="accordion-content">
+
               </div>
             </div>
             <div class="accordion-container">
               <div class="accordion-title">Precio</div>
-              <div class="accordion-content">CSS stands for Cascading Style Sheets. It is the language for describing
-                the
-                presentation of Web pages, including colours, layout, and fonts, thus making our web pages presentable
-                to the users. CSS is designed to make style sheets for the web. It is independent of HTML and can be
-                used with any XML-based markup language. CSS is popularly called the design language of the web.
+              <div id="price" class="accordion-content">
+
               </div>
             </div>
           </div>
         </div>
+        <!-- End Accordion -->
+        <div id="filterBtn" class="button btn-primary margin-higher">Filtrar</div>
       </div>
 
       <div id="action-bar-container" class="card no-margin action-bar col-span-3">
@@ -119,11 +117,11 @@
         </nav>
       </div>
 
-      <div id="products-container" class="container-width col-span-2 no-padding">
-        <div id="products" class="grid col-3 med-col-2"></div>
+      <div id="products-container" class="container-width col-span-2 med-col-span-3  no-padding">
+        <div id="products" class="grid col-3 med-col-3 lit-col-1"></div>
       </div>
 
-      <div id="pagination-container" class="container-width col-span-2 no-padding no-margin">
+      <div id="pagination-container" class="container-width col-span-2 med-col-span-3 no-padding no-margin">
         <div id="pagination" class="card action-bar center">
           <nav aria-label="Page navigation">
             <ul class="pagination">

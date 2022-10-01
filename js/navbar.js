@@ -44,7 +44,6 @@ const Navbar = () => {
                     this.nav.classList.add("nav-background");
                     this.navMobile.classList.add('nav-background');
                 }
-                console.log(scrollAbajo)
             })
         }
     }

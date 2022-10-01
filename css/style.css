@@ -260,16 +260,6 @@ select:focus {
   grid-row-end: 6;
 }
 
-#products-container {
-  grid-column-start: 2;
-  grid-column-end: -1;
-}
-
-#pagination-container {
-  grid-column-start: 2;
-  grid-column-end: -1;
-}
-
 .nav {
   position: fixed;
   top: 0;
@@ -363,15 +353,21 @@ i {
 }
 
 /* Tamano Mediano - Tablets */
-/* Tamano pequeno - Celulares */
-@media screen and (max-width: 576px) {
-  /*Nav*/
+@media screen and (max-width: 1200px) {
+  /* Nav */
   #nav {
     display: none;
   }
   #nav-mobile {
     display: flex;
   }
+  /* Filters */
+  #filters-container {
+    display: none;
+  }
+}
+/* Tamano pequeno - Celulares */
+@media screen and (max-width: 576px) {
   /*Slider*/
   .slider-container {
     height: 300px;

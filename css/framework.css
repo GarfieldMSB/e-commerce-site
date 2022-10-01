@@ -59,6 +59,17 @@ img {
     margin-bottom: 20px auto;
 }
 
+.container-sidebar {
+    top: 75px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .3);
+    justify-content: right;
+    z-index: 99;
+    display: none;
+}
+
 /* ===========================
     GRID
 =========================== */
@@ -221,6 +232,35 @@ img {
     background: rgb(100, 100, 100, 0.4);
 }
 
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.checkbox {
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 400px;
+    /* top: 75px;
+    float: right;
+    position: absolute; */
+    background-color: #fff;
+    z-index: 999;
+    transition: height .3 ease;
+}
+
+.background-sidebar {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3)
+}
+
 /* ===========================
     FUENTES
 =========================== */
@@ -275,6 +315,13 @@ form .input:focus {
     justify-content: center;
 }
 
+.btn-primary {
+    padding: 5px;
+    background-color: #08B4BE;
+    border-radius: 15px;
+    color: #fff;
+}
+
 /* .button {
     background: #641ee7;
     border: none;
@@ -299,6 +346,14 @@ form .input:focus {
 .button.green:hover {
     background: #00833d;
 } */
+
+/* ===========================
+    ACTIVATES
+=========================== */
+
+.container-sidebar.active{
+    display: flex;
+}
 
 /* ===========================
     HELPERS

@@ -367,15 +367,12 @@ select {
     // grid-row-start: 1;
 }
 
-#products-container {
-    grid-column-start: 2;
-    grid-column-end: -1;
-}
+// #products-container {
+//     grid-column-start: 2;
+//     grid-column-end: -1;
+// }
 
-#pagination-container {
-    grid-column-start: 2;
-    grid-column-end: -1;
-}
+
 
 .nav {
     position: fixed;
@@ -485,20 +482,25 @@ i {
 
 /* Tamano Mediano - Tablets */
 @media screen and (max-width: 1200px){
-
+    /* Nav */
+    #nav {
+        display: none;
+    }
+    
+    #nav-mobile {
+        display: flex;
+    }
+    
+    /* Filters */
+    #filters-container {
+        display: none;
+    }
 }
 
 /* Tamano pequeno - Celulares */
 @media screen and (max-width: 576px){
     
-    /*Nav*/
-    #nav {
-        display: none;
-    }
-
-    #nav-mobile {
-        display: flex;
-    }
+    
 
     /*Slider*/
     .slider-container {
